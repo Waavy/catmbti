@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ResultData } from "../assets/data/resultdata";
+import KakaoShareButton from "../component/KakaoShareButton";
 
 const Result = () => {
   const navigate = useNavigate();
@@ -32,10 +33,13 @@ const Result = () => {
             height = { 350 } />
         </LogoImage>
         <Desc>예비 집사님과 찰떡궁합인 고양이는 { resultData.name } 입니다.</Desc>
-        <Button 
-          style = {{fontSize: "24px"}}
-          onClick = {() => navigate("/")}
-        >Test 다시하기</Button>
+        <ButtonGroup>
+          <Button 
+            style = {{fontSize: "24px"}}
+            onClick = {() => navigate("/")}
+          >Test 다시하기</Button>
+          <KakaoShareButton />
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
@@ -78,4 +82,9 @@ const Desc = styled.div`
   font-size: 20pt;
   margin-top: 30px;
   margin-bottom: 30px;
+`
+
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: row;
 `
