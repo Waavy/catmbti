@@ -38,7 +38,7 @@ const Result = () => {
             style = {{fontSize: "24px"}}
             onClick = {() => navigate("/")}
           >Test 다시하기</Button>
-          <KakaoShareButton />
+          <KakaoShareButton data={ resultData } />
         </ButtonGroup>
       </Contents>
     </Wrapper>
