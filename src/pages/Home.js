@@ -18,7 +18,8 @@ const Home = () => {
       <Contents>
         <Title>나에게 맞는 주인님은?</Title>
         <LogoImage>
-          <img 
+          <img
+            alt = "고양이 사진"
             className = "rounded-circle"
             src = { PangImage }
             width = { 350 }
